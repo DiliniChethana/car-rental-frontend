@@ -1,0 +1,95 @@
+// This file contains sample car data for testing the AdminCars page
+// You can copy this data and paste it into the form to test adding cars
+
+export const sampleCars = [
+  {
+    make: "Toyota",
+    model: "Camry",
+    year: 2023,
+    category: "Standard",
+    pricePerDay: 45.00,
+    location: "Downtown",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Petrol",
+    features: "Air Conditioning, GPS, Bluetooth, Backup Camera",
+    description: "Reliable and comfortable sedan perfect for city driving and long trips.",
+    imageUrl: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=500",
+    isAvailable: true
+  },
+  {
+    make: "Honda",
+    model: "CR-V",
+    year: 2023,
+    category: "SUV",
+    pricePerDay: 55.00,
+    location: "Airport",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Petrol",
+    features: "Air Conditioning, GPS, Bluetooth, All-Wheel Drive, Lane Assist",
+    description: "Spacious SUV ideal for family trips and outdoor adventures.",
+    imageUrl: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=500",
+    isAvailable: true
+  },
+  {
+    make: "BMW",
+    model: "3 Series",
+    year: 2023,
+    category: "Luxury",
+    pricePerDay: 85.00,
+    location: "City Center",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Petrol",
+    features: "Leather Seats, Premium Sound, GPS, Bluetooth, Sunroof, Park Assist",
+    description: "Premium luxury sedan offering exceptional performance and comfort.",
+    imageUrl: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500",
+    isAvailable: true
+  },
+  {
+    make: "Ford",
+    model: "Mustang",
+    year: 2023,
+    category: "Convertible",
+    pricePerDay: 75.00,
+    location: "Downtown",
+    seats: 4,
+    transmission: "Manual",
+    fuelType: "Petrol",
+    features: "Sport Package, Premium Sound, GPS, Bluetooth, Performance Tires",
+    description: "Iconic sports car perfect for a thrilling driving experience.",
+    imageUrl: "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?w=500",
+    isAvailable: true
+  },
+  {
+    make: "Tesla",
+    model: "Model 3",
+    year: 2023,
+    category: "Premium",
+    pricePerDay: 90.00,
+    location: "Mall Complex",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Electric",
+    features: "Autopilot, Premium Interior, Supercharger Access, Mobile Connectivity",
+    description: "Cutting-edge electric vehicle with advanced technology and zero emissions.",
+    imageUrl: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500",
+    isAvailable: true
+  },
+  {
+    make: "Nissan",
+    model: "Altima",
+    year: 2022,
+    category: "Economy",
+    pricePerDay: 35.00,
+    location: "North Station",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Petrol",
+    features: "Air Conditioning, Bluetooth, USB Ports",
+    description: "Affordable and fuel-efficient sedan for budget-conscious travelers.",
+    imageUrl: "https://images.unsplash.com/photo-1610768764270-790fbec18178?w=500",
+    isAvailable: true
+  }
+];

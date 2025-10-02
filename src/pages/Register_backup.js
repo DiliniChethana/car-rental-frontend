@@ -1,0 +1,1 @@
+// Backup of original Register.js before simplification
