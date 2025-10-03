@@ -122,12 +122,13 @@ const AdminCars = () => {
     try {
       setLoading(true);
       
-      // Prepare car data for backend
+      // Prepare car data for MySQL backend
       const carData = {
         make: formData.make,
         model: formData.model,
         year: parseInt(formData.year),
         pricePerDay: parseFloat(formData.pricePerDay),
+        price_per_day: parseFloat(formData.pricePerDay),  // MySQL field name
         seats: parseInt(formData.seats),
         category: formData.category,
         location: formData.location,
@@ -139,6 +140,8 @@ const AdminCars = () => {
         licensePlate: formData.licensePlate,
         mileage: parseFloat(formData.mileage) || 0,
         available: formData.available,
+        is_available: formData.available,  // MySQL field name
+        status: 'Active',                  // Default MySQL status
         features: formData.features,
       };
 
@@ -168,7 +171,7 @@ const AdminCars = () => {
       model: car.model || '',
       year: car.year || new Date().getFullYear(),
       category: car.category || '',
-      pricePerDay: car.pricePerDay || '',
+      pricePerDay: car.pricePerDay || car.price_per_day || '',
       location: car.location || '',
       seats: car.seats || '',
       transmission: car.transmission || 'Automatic',
@@ -179,7 +182,8 @@ const AdminCars = () => {
       color: car.color || '',
       licensePlate: car.licensePlate || '',
       mileage: car.mileage || '',
-      available: car.available !== undefined ? car.available : true,
+      available: car.available !== undefined ? car.available : 
+                car.is_available !== undefined ? car.is_available : true,
     });
     setOpenDialog(true);
   };
@@ -305,12 +309,12 @@ const AdminCars = () => {
                   <TableCell>
                     <Chip label={car.category} size="small" />
                   </TableCell>
-                  <TableCell>${car.pricePerDay}/day</TableCell>
+                  <TableCell>${car.pricePerDay || car.price_per_day}/day</TableCell>
                   <TableCell>{car.location}</TableCell>
                   <TableCell>
                     <Chip 
-                      label={car.available ? 'Available' : 'Not Available'} 
-                      color={car.available ? 'success' : 'error'}
+                      label={(car.available || car.is_available) ? 'Available' : 'Not Available'} 
+                      color={(car.available || car.is_available) ? 'success' : 'error'}
                       size="small"
                     />
                   </TableCell>

@@ -514,6 +514,22 @@ const Cars = () => {
                       label={`$${car.pricePerDay || car.price || car.price_per_day}/day`}
                       size="medium"
                     />
+                    {car.status && (
+                      <Chip
+                        label={car.status}
+                        size="small"
+                        sx={{
+                          position: 'absolute',
+                          bottom: 8,
+                          left: 8,
+                          backgroundColor: car.status === 'Active' ? '#2196f3' : 
+                                         car.status === 'Maintenance' ? '#ff9800' : 
+                                         car.status === 'Booked' ? '#f44336' : '#9e9e9e',
+                          color: 'white',
+                          fontWeight: 'bold'
+                        }}
+                      />
+                    )}
                   </Box>
                   
                   <CardContent sx={{ flexGrow: 1, p: 3 }}>
